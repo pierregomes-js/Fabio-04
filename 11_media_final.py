@@ -17,10 +17,14 @@ def main():
         else:
             reprovado += 1
         matricula = int(input('Matricula do aluno(FLAG = 0): '))
+
+    print('Resultado:')
+    print(f'Total de aprovados: {aprovado}.')
+    print(f'Total de reprovados: {reprovado}.')
+    print(f'Total de alunos: {alunos}.')
     
     
 def media_final(n1, n2, n3):
     return ((2 * n1) + (3 * n2) + (5 * n3)) / 10
 
 main()
-#incompleto
