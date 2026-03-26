@@ -1,5 +1,5 @@
 def main():
-    print('Progressão Aritmética')
+    print('Progressão Geométrica')
     primeiro_termo = int(input('Primeiro termo: '))
     razao = int(input('Razão: '))
     n = int(input('Quantidade de termos: '))
@@ -8,6 +8,6 @@ def main():
     while n > 0:
         n -= 1
         posicao += 1
-        print(primeiro_termo + ((posicao - 1) * razao))    
+        print(primeiro_termo * (razao ** posicao) )   
 
 main()
