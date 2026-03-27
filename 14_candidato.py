@@ -31,14 +31,31 @@ def main():
 
     total = serra + dilma + cirogomes + outros_candidatos + indecisos + nulo_branco
 
+    def percentual(candidato, total):
+        return f'{((candidato / total) * 100):.2f}%'
+    
+    percentual_dilma = percentual(dilma, total)
+    percentual_serra = percentual(serra, total)
+    percentual_cirogomes = percentual(cirogomes, total)
+    percentual_outros = percentual(outros_candidatos, total)
+    percentual_indecisos = percentual(indecisos, total)
+    percentual_nulobranco = percentual(nulo_branco, total)
+
+
     print('Resultado:')
-    print(f'Percentual da candidata Dilma: {((dilma / total) * 100):.2f}%.')
-    print(f'Percentual do candidato Serra: {((serra / total) * 100):.2f}%.')
-    print(f'Percentual do candidato Ciro Gomes: {((cirogomes / total) * 100):.2f}%.')
-    print(f'Percentual de outros candidatos: {((outros_candidatos / total) * 100):.2f}%.')
-    print(f'Percentual de indecisos: {((indecisos / total) * 100):.2f}%.')
-    print(f'Percentual de votos nulo/branco: {((nulo_branco / total) * 100):.2f}%.')
+    print(f'Percentual da candidata Dilma: {percentual_dilma}.')
+    print(f'Percentual do candidato Serra: {percentual_serra}.')
+    print(f'Percentual do candidato Ciro Gomes: {percentual_cirogomes}.')
+    print(f'Percentual de outros candidatos: {percentual_outros}.')
+    print(f'Percentual de indecisos: {percentual_indecisos}.')
+    print(f'Percentual de votos nulo/branco: {percentual_nulobranco}.')
     print(f'Total de entrevistados: {total}.')
+
+    if ((dilma / total) * 100) <= 50 and ((serra / total) * 100) <= 50 and ((cirogomes / total) * 100) <= 50:
+        print('Será previsto um segundo turno.')
+    else:
+        print('Não haverá segundo turno.')
+
 
 main()
 #incompleto
