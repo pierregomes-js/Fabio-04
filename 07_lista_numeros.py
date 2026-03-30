@@ -1,9 +1,10 @@
-#incompleto
 def main():
-    lista = []
-    numero = int(input('Digite um número: '))
+    primeiro_numero = int(input('Digite um número: '))
+    numeros = int(input('Digite outro número:'))
 
-    while numero not in lista:
+    while numeros != primeiro_numero:
+        numeros = int(input('Digite outro número:'))
 
+    print('Você repetiu um número.')
 
 main()

@@ -1,11 +1,11 @@
 def main():
-    casas_decimais = 0
-    n = int(input('Digite um número: '))
-    if n < 10:
-        casas_decimais = 1
-    else:
-        while 
 
+    n = int(input('Numero: '))
+    quant_digitos = 1
+
+    while n >= (10 ** quant_digitos):
+        quant_digitos += 1
+        
+    print(f'QUantidade de dígitos de {n}: {quant_digitos}.')
 
 main()
-#incompleto

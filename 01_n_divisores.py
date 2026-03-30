@@ -1,18 +1,20 @@
 def main():
-    n = int(input('Digite um número (FLAG = 0): '))
-    divisores(n)
 
-    while n != 0:
-        n = int(input('Digite um número (FLAG = 0): '))
-        divisores(n)
+    def obter_divisores(n):
+        print(f'Divisores de {n}: ')
+        divisor = 1
 
-    def divisores(n):
-        divisor = n
-
-        while divisor > 0:
+        while divisor <= n:
             if n % divisor == 0:
-                return divisor
-            divisor -= 1
+                print(divisor, end=' ')
+            divisor += 1
+        return
+    
+    numero = int(input('Insira um número(flag = 0): '))
 
+    while numero != 0:
+        obter_divisores(numero)
+        print(' ')
+        numero = int(input('Insira um número(flag = 0): '))
 
 main()
